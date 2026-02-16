@@ -1,0 +1,6 @@
+venv/
+smart-contract-project/
+__pycache__/
+.env
+vectorstore/
+uploaded_docs/
