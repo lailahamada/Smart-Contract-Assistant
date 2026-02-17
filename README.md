@@ -156,15 +156,15 @@ http://127.0.0.1:8000/docs
 
 ### FastAPI / Swagger
 
-![Swagger Screenshot](images/fastapi.png)
+![Swagger Screenshot](Image/fastapi.png)
 
 ### LangServe Endpoint
 
-![LangServe Screenshot](images/langserve.png)
+![LangServe Screenshot](Image/langserve.png)
 
 ### Gradio Interface
 
-![Gradio Screenshot](images/Gradio.png)
+![Gradio Screenshot](Image/Gradio.png)
 
 ---
 
