@@ -35,7 +35,6 @@ async def upload_file(file: UploadFile = File(...)):
     return {"message": f"File '{file.filename}' has been processed successfully."}
 
 # --- RAG Endpoint (LangServe) ---
-# تأكدي إن دالة build_rag_chain() بترجع الـ chain فقط
 rag_chain = build_rag_chain()
 add_routes(app, rag_chain, path="/rag")
 
@@ -44,14 +43,11 @@ def summarize():
     """
     Retrieves document content and returns a structured summary.
     """
-    # استدعاء الدالة اللي عدلناها بـ db.get()
     chain, full_text = build_summary_chain()
     
-    # فحص لو مفيش محتوى عشان ميديناش Error 500
     if chain is None:
-        return {"summary": full_text} # هترجع رسالة "No content found"
+        return {"summary": full_text} 
 
-    # تنفيذ الـ chain
     result = chain.invoke({"contract": full_text})
 
     return {"summary": result}
